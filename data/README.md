@@ -1,10 +1,10 @@
 # Data
 
-Place the two CSV files here (they are not tracked if you add them to `.gitignore`; keep them if the dataset is public and redistributable):
-
 | File | Content |
 |---|---|
-| `Orders.csv` | Order lines (Row.ID, Order.ID, Order.Date, Ship.Date, Ship.Mode, Customer, Segment, Market, Region, Category, Sub-Category, Product, Sales, Quantity, Discount, Profit, Shipping.Cost, Order.Priority…) |
-| `Returns.csv` | Returned orders (Order.ID, Returned, Region) |
+| `Orders.csv` | 51,290 order lines × 24 columns (Row ID, Order ID, dates, ship mode, customer, segment, geography, market, product, category, sales, quantity, discount, profit, shipping cost, order priority) |
+| `Returns.csv` | 1,079 returned orders (`Returned`, `Order ID`, `Region`) |
 
-**Source**: <fill in: public dataset name and link>. Check its licence before committing the files.
+**Source**: the files look like the public *Global Superstore* sales dataset. Add the exact link you downloaded them from here, and check its licence; remove the files from the repository if redistribution is not allowed.
+
+Facts checked on the files: `Order ID` is unique in `Returns.csv` (the join adds no rows); `Postal Code` is 80.5% missing (column dropped); 2,600 lines have a shipping delay of 0 days.
